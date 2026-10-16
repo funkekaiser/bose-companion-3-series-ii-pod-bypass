@@ -48,7 +48,7 @@ Number them as you see the board from above after pulling the panel out:
 - **Pins 1 and 7** are at the end next to the screw marked with **red paint** (labelled TP327 on the board).
 - **Pin 12** is next to the **TP322** label.
 
-![Pin numbering](images/05-pin-numbering.jpg)
+![Pin numbering](images/04-pin-numbering.jpg)
 
 ```
    back panel side
@@ -76,7 +76,7 @@ Number them as you see the board from above after pulling the panel out:
 
 In the photos, 8 to 11 is the larger copper loop, 9 to 10 is a solder bridge between the two neighbouring legs, and 5 to 12 is a short piece of wire.
 
-![Bridges soldered](images/04-bridges-closeup.jpg)
+![Bridges soldered](images/05-bridges-closeup.jpg)
 
 Check that no solder blob touches a neighbouring leg, then slide the panel back in and put the 10 screws back.
 
