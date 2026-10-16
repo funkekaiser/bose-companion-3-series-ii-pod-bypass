@@ -1,29 +1,71 @@
 # Bose Companion 3 Series II: control pod bypass (12-pin)
 
-Run a Bose Companion 3 **Series II** without its control pod by bridging three pairs of pins on the back of the 12-pin pod connector inside the bass module. Useful when the pod is broken, crackles, or is mechanically worn out, and a replacement pod is too expensive.
+Run a Bose Companion 3 **Series II** without its control pod by bridging three pairs of pins on the 12-pin pod connector. Useful when the pod is broken, crackles, or is mechanically worn out, and a replacement pod is too expensive.
 
 After the bypass, the system runs at fixed full volume and you control the volume from your computer. The Bass Compensation knob on the back keeps working.
 
 > **This guide is for the square 12-pin "To Control Pod" port.** The round 9-pin version uses different pins.
 
-![Back panel with the 12-pin port, pins labelled](images/01-back-panel.jpg)
+There are two ways to do it:
 
-The pin numbers used in this guide, as seen looking into the "To Control Pod" port from outside (unit lying on its side, as in the photo above). The plug on the pod cable is the mirror image of this. It has **no contacts at pins 1 and 3**, so those two are unused:
+- **[Method A: from the outside](#method-a-bridge-from-the-outside-no-opening).** Bridge the pins directly in the "To Control Pod" port. No opening, no soldering, fully reversible.
+- **[Method B: on the board](#method-b-solder-on-the-board).** Open the bass module and solder the bridges onto the back of the connector. More work, but permanent and nothing can slip out.
+
+Both methods make the same three connections.
+
+## The bridges
+
+| Bridge  | Function                                 |
+| ------- | ---------------------------------------- |
+| 8 to 11 | Left channel                             |
+| 9 to 10 | Right channel                            |
+| 5 to 12 | Turns the amp on (stands in for the pod) |
+
+**Alternative to 5 to 12:** [this Reddit post](https://www.reddit.com/r/bose/comments/17eyds2/bypass_c50_on_companion_3_series_ii_subwoofer/) uses **2 to 7** instead (converted to this guide's numbering), and that also works. Most likely pins 2 and 5 carry the same signal, as do 7 and 12. Use **one or the other, not both**: if they turn out to be different signals, bridging both would connect two circuits that were never meant to be connected.
+
+Pins 1 and 3 are unused: the plug on the pod cable has no contacts there.
 
 ![Pod plug, pins labelled](images/06-pod-plug.jpg)
 
-## What you need
+## Safety first
+
+- **Unplug the power cord** before touching any pins. For Method B, also wait a few minutes so the power supply capacitors can discharge.
+- **Set your computer volume low** before the first power-on. There is no volume control between the computer and the amp anymore.
+
+## Method A: bridge from the outside (no opening)
+
+### What you need
+
+- 3 short jumper wires that fit over the pins in the port (e.g. female-to-female jumper wires), or short pieces of insulated wire with stripped ends
+- Optional: tape or a dab of hot glue to keep them in place
+
+### Pin numbering from the outside
+
+Looking into the "To Control Pod" port from behind the unit, with the unit lying on its side as in the photo:
+
+![Back panel with the 12-pin port, pins labelled](images/01-back-panel.jpg)
+
+- **Pins 1 and 7** are at the end towards the **Bass Compensation knob**.
+- **Pins 1 to 6** are the row **further from the heatsink**, pins 7 to 12 the row next to it.
+
+> The pod plug photo above is the plug's face, which is the **mirror image** of the port. When working on the port, go by the back panel photo.
+
+### Steps
+
+1. Unplug the power cord and the pod.
+2. Connect **8 to 11**, **9 to 10** and **5 to 12** in the port.
+3. Make sure no bare metal touches a neighbouring pin, and secure the wires so they can't slip out.
+4. Continue with [Connect and test](#connect-and-test).
+
+## Method B: solder on the board
+
+### What you need
 
 - Phillips screwdriver
 - Soldering iron and solder
 - A few cm of wire (a piece of solid copper wire works well)
 
-## Safety first
-
-- **Unplug the power cord** before opening anything. Wait a few minutes so the power supply capacitors can discharge.
-- **Set your computer volume low** before the first power-on. There is no volume control between the computer and the amp anymore.
-
-## 1. Open the bass module
+### 1. Open the bass module
 
 Remove the **10 screws** on the back panel:
 
@@ -37,7 +79,7 @@ Then pull the whole back panel (with the heatsink) straight out a few centimetre
 
 ![Board, solder side](images/03-board-solder-side.jpg)
 
-## 2. Find the 12-pin connector
+### 2. Find the 12-pin connector
 
 The connector sits right behind the "To Control Pod" port, at the edge of the board next to the panel. Since it's a right-angle connector, what you see from above are its 12 solder legs: two rows of six, running parallel to the back panel.
 
@@ -64,23 +106,17 @@ Number them as you see the board from above after pulling the panel out:
 
 > Other guides may number the pins from the opposite side, so their top row is our bottom row. Go by the landmarks and the photo, not the numbers alone.
 
-## 3. Bridge the pins
+### 3. Solder the bridges
 
-| Bridge  | Function                                       |
-| ------- | ---------------------------------------------- |
-| 8 to 11 | Left channel                                   |
-| 9 to 10 | Right channel                                  |
-| 5 to 12 | Turns the amp on (stands in for the pod)       |
+Solder **8 to 11**, **9 to 10** and **5 to 12** (see [The bridges](#the-bridges)).
 
-**Alternative to 5 to 12:** [this Reddit post](https://www.reddit.com/r/bose/comments/17eyds2/bypass_c50_on_companion_3_series_ii_subwoofer/) uses **2 to 7** instead (converted to this guide's numbering), and that also works. Most likely pins 2 and 5 carry the same signal, as do 7 and 12. Use **one or the other, not both**: if they turn out to be different signals, bridging both would connect two circuits that were never meant to be connected.
-
-In the photos, 8 to 11 is the larger copper loop, 9 to 10 is a solder bridge between the two neighbouring legs, and 5 to 12 is a short piece of wire.
+In the photo, 8 to 11 is the larger copper loop, 9 to 10 is a solder bridge between the two neighbouring legs, and 5 to 12 is a short piece of wire.
 
 ![Bridges soldered](images/05-bridges-closeup.jpg)
 
 Check that no solder blob touches a neighbouring leg, then slide the panel back in and put the 10 screws back.
 
-## 4. Connect and test
+## Connect and test
 
 1. Plug your computer into the **From Computer** input with a normal 3.5 mm stereo cable.
 2. Set the computer volume low, plug in the power cord and switch the unit on.
@@ -92,7 +128,8 @@ This guide is based on [this video](https://www.youtube.com/watch?v=JNieR2Ab0Ck)
 
 ## Troubleshooting
 
-- **Left and right swapped:** see step 4.
+- **Nothing happens:** check that the 5 to 12 (or 2 to 7) bridge is making contact.
+- **Left and right swapped:** see [Connect and test](#connect-and-test).
 - **Rattle, hum or buzz with nothing connected:** that comes from the amplifier or speakers, not the pod. This bypass won't fix it.
 
 ## Disclaimer
