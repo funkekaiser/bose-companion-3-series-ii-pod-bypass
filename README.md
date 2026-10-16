@@ -19,9 +19,9 @@ Both methods make the same three connections.
 | ------- | ---------------------------------------- |
 | 8 to 11 | Left channel                             |
 | 9 to 10 | Right channel                            |
-| 5 to 12 | Turns the amp on (stands in for the pod) |
+| 5 to 12 | Needed, exact function not confirmed     |
 
-**Alternative to 5 to 12:** [this Reddit post](https://www.reddit.com/r/bose/comments/17eyds2/bypass_c50_on_companion_3_series_ii_subwoofer/) uses **2 to 7** instead (converted to this guide's numbering), and that also works. Most likely pins 2 and 5 carry the same signal, as do 7 and 12. Use **one or the other, not both**: if they turn out to be different signals, bridging both would connect two circuits that were never meant to be connected.
+**Alternative to 5 to 12:** [this Reddit post](https://www.reddit.com/r/bose/comments/17eyds2/bypass_c50_on_companion_3_series_ii_subwoofer/) uses **2 to 7** instead (converted to this guide's numbering), and that also works. It's not confirmed whether 2 to 7 and 5 to 12 are the same connection. Use **one or the other, not both**: if they are different signals, bridging both would connect two circuits that were never meant to be connected.
 
 Pins 1 and 3 are unused: the plug on the pod cable has no contacts there.
 
@@ -125,7 +125,7 @@ This guide is based on [this video](https://www.youtube.com/watch?v=JNieR2Ab0Ck)
 
 ## Troubleshooting
 
-- **Nothing happens:** check that the 5 to 12 (or 2 to 7) bridge is making contact.
+- **Nothing happens:** check that all three bridges are making contact.
 - **Left and right swapped:** see [Connect and test](#connect-and-test).
 - **Rattle, hum or buzz with nothing connected:** that comes from the amplifier or speakers, not the pod. This bypass won't fix it.
 
