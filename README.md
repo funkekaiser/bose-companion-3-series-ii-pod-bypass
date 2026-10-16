@@ -8,8 +8,8 @@ After the bypass, the system runs at fixed full volume and you control the volum
 
 There are two ways to do it:
 
-- **[Method A: from the outside](#method-a-bridge-from-the-outside-no-opening).** Bridge the pins directly in the "To Control Pod" port. No opening, no soldering, fully reversible.
-- **[Method B: on the board](#method-b-solder-on-the-board).** Open the bass module and solder the bridges onto the back of the connector. More work, but permanent and nothing can slip out.
+- **[Method A: on the board](#method-a-solder-on-the-board).** Open the bass module and solder the bridges onto the back of the connector. Permanent, and nothing can slip out.
+- **[Method B: from the outside](#method-b-bridge-from-the-outside).** Bridge the pins directly in the "To Control Pod" port. No opening and fully reversible, but standard jumper wires are too big for the port.
 
 Both methods make the same three connections.
 
@@ -29,35 +29,10 @@ Pins 1 and 3 are unused: the plug on the pod cable has no contacts there.
 
 ## Safety first
 
-- **Unplug the power cord** before touching any pins. For Method B, also wait a few minutes so the power supply capacitors can discharge.
+- **Unplug the power cord** before touching any pins. For Method A, also wait a few minutes so the power supply capacitors can discharge.
 - **Set your computer volume low** before the first power-on. There is no volume control between the computer and the amp anymore.
 
-## Method A: bridge from the outside (no opening)
-
-### What you need
-
-- 3 short jumper wires that fit over the pins in the port (e.g. female-to-female jumper wires), or short pieces of insulated wire with stripped ends
-- Optional: tape or a dab of hot glue to keep them in place
-
-### Pin numbering from the outside
-
-Looking into the "To Control Pod" port from behind the unit, with the unit lying on its side as in the photo:
-
-![Back panel with the 12-pin port, pins labelled](images/01-back-panel.jpg)
-
-- **Pins 1 and 7** are at the end towards the **Bass Compensation knob**.
-- **Pins 1 to 6** are the row **further from the heatsink**, pins 7 to 12 the row next to it.
-
-> The pod plug photo above is the plug's face, which is the **mirror image** of the port. When working on the port, go by the back panel photo.
-
-### Steps
-
-1. Unplug the power cord and the pod.
-2. Connect **8 to 11**, **9 to 10** and **5 to 12** in the port.
-3. Make sure no bare metal touches a neighbouring pin, and secure the wires so they can't slip out.
-4. Continue with [Connect and test](#connect-and-test).
-
-## Method B: solder on the board
+## Method A: solder on the board
 
 ### What you need
 
@@ -115,6 +90,28 @@ In the photo, 8 to 11 is the larger copper loop, 9 to 10 is a solder bridge betw
 ![Bridges soldered](images/05-bridges-closeup.jpg)
 
 Check that no solder blob touches a neighbouring leg, then slide the panel back in and put the 10 screws back.
+
+## Method B: bridge from the outside
+
+> This method is [reported working on Reddit](https://www.reddit.com/r/bose/comments/17eyds2/bypass_c50_on_companion_3_series_ii_subwoofer/). I didn't do it myself: standard female jumper wires (Dupont style) are **too big** to fit into the port, so I went with soldering. You'll need something thinner that makes reliable contact with the pins, e.g. thin wire or smaller crimp contacts. If you do it this way, please open an issue and share what you used.
+
+### Pin numbering from the outside
+
+Looking into the "To Control Pod" port from behind the unit, with the unit lying on its side as in the photo:
+
+![Back panel with the 12-pin port, pins labelled](images/01-back-panel.jpg)
+
+- **Pins 1 and 7** are at the end towards the **Bass Compensation knob**.
+- **Pins 1 to 6** are the row **further from the heatsink**, pins 7 to 12 the row next to it.
+
+> The pod plug photo above is the plug's face, which is the **mirror image** of the port. When working on the port, go by the back panel photo.
+
+### Steps
+
+1. Unplug the power cord and the pod.
+2. Connect **8 to 11**, **9 to 10** and **5 to 12** in the port.
+3. Make sure no bare metal touches a neighbouring pin, and secure the wires (tape or a dab of hot glue) so they can't slip out.
+4. Continue with [Connect and test](#connect-and-test).
 
 ## Connect and test
 
